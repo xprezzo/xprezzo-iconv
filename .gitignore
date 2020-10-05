@@ -1,0 +1,14 @@
+# Node.js stuff
+node_modules
+package-lock.json
+
+# Editors
+*~
+*sublime-*
+/.idea
+.nyc_output
+
+# Development environment
+/coverage
+/benchmarks/node_envs
+/generation/source-data

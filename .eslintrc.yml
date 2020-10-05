@@ -1,0 +1,29 @@
+env:
+    commonjs: true
+    es6: true
+    node: true
+    mocha: true
+extends: "eslint:recommended"
+parserOptions:
+    ecmaVersion: 6
+plugins:
+    - es
+rules:
+    strict: "error"
+    no-console: "error"
+    no-template-curly-in-string: "error"
+    consistent-return: "error"
+    eqeqeq: ["error", "smart"]
+    no-throw-literal: "error"
+    no-eval: "error"
+    no-implied-eval: "error"
+    # no-use-before-define: "error"  # TODO
+    # no-var: "error"  # TODO
+    block-scoped-var: "error"
+    prefer-const: "error"
+    yoda: ["error", "never", { "exceptRange": true }]
+
+    # 'es' pluin rules. See https://mysticatea.github.io/eslint-plugin-es/rules/
+    # Disallow the ones that are not supported by Node 4.5
+    es/no-destructuring: "error"
+    es/no-default-parameters: "error"
