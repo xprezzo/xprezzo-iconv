@@ -4,12 +4,12 @@
 // Our codec supports UTF-16 surrogates, extensions for GB18030 and unicode sequences.
 // To save memory and loading time, we read table files only when requested.
 
-const UNASSIGNED = -1,
-    GB18030_CODE = -2,
-    SEQ_START = -10,
-    NODE_START = -1000,
-    UNASSIGNED_NODE = new Array(0x100),
-    DEF_CHAR = -1;
+const UNASSIGNED = -1
+const GB18030_CODE = -2
+const SEQ_START = -10
+const NODE_START = -1000
+const UNASSIGNED_NODE = new Array(0x100)
+const DEF_CHAR = -1
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 
