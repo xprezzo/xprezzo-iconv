@@ -1,7 +1,7 @@
 {
     "name": "xprezzo-iconv",
     "description": "Convert character encodings in pure javascript.",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "license": "MIT",
     "keywords": [
         "iconv",
@@ -9,7 +9,7 @@
         "charset",
         "icu"
     ],
-    "author": "Ben Ajenoui <info@seohero.io>",
+    "author": "Cloudgen Wong <cloudgen.wong@gmail.com>",
     "main": "./lib/index-node.js",
     "repository": "xprezzo/xprezzo-iconv",
     "engines": {
@@ -22,14 +22,14 @@
         "test": "mocha --reporter spec --check-leaks --bail --grep ."
     },
     "dependencies": {
-        "xprezzo-buffer": "1.1.1"
+        "xprezzo-buffer": "1.1.2"
     },
     "devDependencies": {
-        "eslint": "7.11.0",
-        "eslint-plugin-es": "^3.0.1",
+        "eslint": "8.15.0",
+        "eslint-plugin-es": "4.1.0",
         "iconv": "^2.3.5",
         "lint-staged": "^10.2.11",
-        "mocha": "8.2.0",
+        "mocha": "8.3.0",
         "nyc": "15.1.0",
         "unorm": "^1.6.0"
     },

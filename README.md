@@ -7,16 +7,16 @@
 ### Basic API
 
 ```javascript
-var iconv = require("xprezzo-iconv");
+const iconv = require("xprezzo-iconv")
 
 // Convert from an encoded buffer to a js string.
-str = iconv.decode(Buffer.from([0x68, 0x65, 0x6c, 0x6c, 0x6f]), "win1251");
+str = iconv.decode(Buffer.from([0x68, 0x65, 0x6c, 0x6c, 0x6f]), "win1251")
 
 // Convert from a js string to an encoded buffer.
-buf = iconv.encode("Sample input string", "win1251");
+buf = iconv.encode("Sample input string", "win1251")
 
 // Check if encoding is supported
-iconv.encodingExists("us-ascii");
+iconv.encodingExists("us-ascii")
 ```
 
 ### Streaming API
@@ -24,25 +24,25 @@ iconv.encodingExists("us-ascii");
 ```javascript
 // Decode stream (from binary data stream to js strings)
 http.createServer(function (req, res) {
-    var converterStream = iconv.decodeStream("win1251");
-    req.pipe(converterStream);
+    var converterStream = iconv.decodeStream("win1251")
+    req.pipe(converterStream)
 
     converterStream.on("data", function (str) {
         console.log(str); // Do something with decoded strings, chunk-by-chunk.
-    });
-});
+    })
+})
 
 // Convert encoding streaming example
 fs.createReadStream("file-in-win1251.txt")
     .pipe(iconv.decodeStream("win1251"))
     .pipe(iconv.encodeStream("ucs2"))
-    .pipe(fs.createWriteStream("file-in-ucs2.txt"));
+    .pipe(fs.createWriteStream("file-in-ucs2.txt"))
 
 // Sugar: all encode/decode streams have .collect(cb) method to accumulate data.
 http.createServer(function (req, res) {
     req.pipe(iconv.decodeStream("win1251")).collect(function (err, body) {
-        assert(typeof body == "string");
-        console.log(body); // full request body string
+        assert(typeof body == "string")
+        console.log(body) // full request body string
     });
 });
 ```
@@ -98,7 +98,7 @@ $ npm run test-cov
 
 ## People
 
-Xprezzo and related projects are maintained by [Ben Ajenoui](mailto:info@seohero.io) and sponsored by [SEO Hero](https://www.seohero.io).
+Xprezzo and related projects are maintained by Cloudgen Wong](mailto:cloudgen.wong@gmail.com).
 
 # License
 

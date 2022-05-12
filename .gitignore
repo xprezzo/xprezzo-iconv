@@ -1,6 +1,7 @@
 # Node.js stuff
 node_modules
 package-lock.json
+yarn.lock
 
 # Editors
 *~
